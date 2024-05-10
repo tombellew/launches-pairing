@@ -1,10 +1,4 @@
 
-describe('App will load', () => {
-  it('passes', () => {
-    cy.visit('http://localhost:3000')
-  })
-})
-
 describe('10 Results are returned', () => {
   it('passes', () => {
     cy.visit('http://localhost:3000')

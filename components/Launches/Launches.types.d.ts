@@ -1,8 +1,9 @@
-// Only typing what is needed - there's more data in the objects returned 
 // Splitting some types here which might be useful in other components
 
 export interface ICore {
-  core: string
+  core: {
+    serial: string
+  }
 }
 
 export interface IPayload {

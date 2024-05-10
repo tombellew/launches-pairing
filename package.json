@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:unit": "jest --config ./jest.config.cjs",
+    "test:unit": "jest --config ./jest.config.cjs --silent",
     "test:e2e": "npx cypress open"
   },
   "dependencies": {

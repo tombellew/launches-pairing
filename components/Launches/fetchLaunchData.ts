@@ -3,16 +3,19 @@ import { ILaunchData } from './Launches.types'
 
 const URL = 'https://api.spacexdata.com/v5/launches/query'
 
-const fetchLaunchData = async (url = URL):Promise<ILaunchData | string> => {
+const fetchLaunchData = async (url = URL): Promise<ILaunchData | string> => {
   const OPTS = {
-    "query": {},
-    "options": {
-      "limit": 10,
-      "populate": [
-        {
-          "path": "payloads"
-        }
-      ]
+    query: {},
+    options: {
+      limit: 10,
+      select: ['name', 'date_utc', 'cores', 'payloads', 'links.patch.small', 'success', 'failures.reason'],
+      populate: [{
+        path: 'cores.core',
+        select: ['serial'],
+      }, {
+        path: 'payloads',
+        select: ['id', 'type'],
+      }]
     }
   }
 

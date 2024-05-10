@@ -17,12 +17,12 @@ const LaunchCard = (props: ILaunchCardProps) => {
       </div>
       <h2><span>{launch.name}</span></h2>
       <p><strong>Date: </strong><span>{launch.date_utc ?? new Date(launch.date_utc).toString() }</span></p>
-      <p><strong>First Core Serial: </strong><span>{launch.cores[0]?.core}</span></p>
+      <p><strong>First Core Serial: </strong><span>{launch.cores[0].core.serial}</span></p>
       
       { launch.payloads && launch.payloads.length > 0 && 
         <p><strong>Payload(s):</strong>
           {launch.payloads.map((payload, index) => (
-            <><span key={index}>{payload.id} ({payload.type})</span><br/></>
+            <span key={index}><span>{payload.id} ({payload.type})</span><br/></span>
           ))}
         </p>
       }
