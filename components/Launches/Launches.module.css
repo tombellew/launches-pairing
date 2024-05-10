@@ -1,0 +1,47 @@
+
+.LaunchCard {
+  background-color: #ffffff5c;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5rem .75rem;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.LaunchCard:hover {
+  background-color: #ffffffa5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.LaunchCard img {
+  max-width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.LaunchCard h2 span {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.5rem;
+}
+
+.LaunchCard p {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  line-height: 1;
+  word-break: break-word;
+}
+
+.LaunchCard p:last-child {
+  margin-bottom: 0;
+}
+
+.LaunchCard p strong {
+  display: block;
+  margin-bottom: .25rem;
+}
+
+.LaunchCard span {
+  font-size: 1rem;
+}
