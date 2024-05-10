@@ -1,3 +1,20 @@
+## Submission
+10 launches displayed from the SpaceX api, only fetching the required data. Rendered through components in the components folder. Basic styling applied to the app. 
+
+Tests with Jest / React testing libary, and Cypress for e2e testing.
+
+A few known considerations & things which could be improved...
+
+In general I prefer to have files in the folder they're used until the point they're used in multiple places. I consider that the types and the api fetch would likely be placed in types and services folders as the project grows.
+
+There's some hardcoding of variables & text would be better placed in config files.
+
+I've prefered real data as opposed to mock data in the testing as the data and api should be stable.
+
+#### Testing
+- ```npm run test:unit```
+- ```npm run test:e2e```
+
 ## Getting Started
 
 First, run the development server:

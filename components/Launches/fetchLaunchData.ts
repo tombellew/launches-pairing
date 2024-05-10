@@ -4,7 +4,7 @@ import { ILaunchData } from './Launches.types'
 const URL = 'https://api.spacexdata.com/v5/launches/query'
 
 const fetchLaunchData = async (url = URL): Promise<ILaunchData | string> => {
-  const OPTS = {
+  const CONFIG = {
     query: {},
     options: {
       limit: 10,
@@ -20,7 +20,7 @@ const fetchLaunchData = async (url = URL): Promise<ILaunchData | string> => {
   }
 
   try {
-    const response = await axios.post(url, OPTS)
+    const response = await axios.post(url, CONFIG)
     return response.data
   } catch (error) {
     console.error('Error fetching launch data:', error)

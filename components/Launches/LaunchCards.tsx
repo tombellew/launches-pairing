@@ -24,7 +24,7 @@ const LaunchCards = () => {
   return (
     <>
       {launchData ? 
-        <ul className={stylesLayout.grid}>
+        <ul className={stylesLayout.grid} data-testid="LaunchCards">
           {launchData.docs.map((launch) => (
             <LaunchCard key={launch.id} launch={launch} />
           ))}  

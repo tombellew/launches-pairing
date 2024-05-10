@@ -2,10 +2,14 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleDirectories: ['node_modules'],
   testMatch: [
-    '**/*tests.ts',
+    '**/*tests.(ts|tsx)',
   ],
+  moduleNameMapper: {
+    "\\.(css)$": "identity-obj-proxy" 
+  },
   preset: 'ts-jest',
   transform: {
-    '^.+\\.(ts|tsx)?$': 'ts-jest',
-  }
+    "^.+\\.[jt]sx?$": "babel-jest",
+  },
+  testEnvironment: 'jsdom',
 };
